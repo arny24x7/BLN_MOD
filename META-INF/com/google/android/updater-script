@@ -1,0 +1,34 @@
+assert(getprop("ro.product.device") == "galaxys2" || getprop("ro.build.product") == "galaxys2" || 
+	getprop("ro.product.device") == "i9100" || getprop("ro.build.product") == "i9100" || 
+	getprop("ro.product.device") == "GT-I9100" || getprop("ro.build.product") == "GT-I9100" || 
+	getprop("ro.product.device") == "GT-I9100M" || getprop("ro.build.product") == "GT-I9100M" || 
+	getprop("ro.product.device") == "GT-I9100P" || getprop("ro.build.product") == "GT-I9100P" || 
+	getprop("ro.product.device") == "GT-I9100T" || getprop("ro.build.product") == "GT-I9100T" || abort("This package is for \"galaxys2,i9100,GT-I9100,GT-I9100M,GT-I9100P,GT-I9100T\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
+
+ui_print("");
+show_progress(0.100000, 0);
+
+ui_print("");
+ui_print(" ########################### ");
+ui_print("           BLN MOD           ");
+ui_print("        Device: i9100        ");
+ui_print(" ########################### ");
+ui_print("");
+show_progress(0.100000, 40);
+
+ui_print("");
+ui_print("Flashing BLN");
+ui_print("");
+run_program("/sbin/busybox", "mount", "/system");
+package_extract_dir("system", "/system");
+show_progress(0.100000, 80);
+
+ui_print(" ");
+ui_print("Fixing Permissions");
+ui_print(" ");
+set_perm(0, 0, 0755, "/system/xbin/uci");
+set_perm(0, 0, 0755, "/system/Synapse/synapse/config.json");
+set_perm(0, 0, 0755, "/system/Synapse/synapse/actions/generic");
+set_perm(0, 0, 0755, "/system/Synapse/synapse/actions/option");
+show_progress(0.100000, 100);
+ui_print("Done!");

@@ -1,0 +1,59 @@
+
+{
+    sections: [
+		{
+    name:BLN,
+    elements:[
+    { STitleBar:{
+		title:"Backlight Notification Settings"
+	}},
+	{ SCheckBox:{
+		description:"BLN will get the ‘menu’ and ‘back’ buttons to light up when you receive a new text, email, or missed call, which means you won’t need to unlock the screen to discover a notification.",
+                label:"BLN",
+                default:0,
+                action:"generic /sys/class/misc/notification/notification_enabled",
+        }},
+
+        { SSeekBar:{
+	title:"Notification Timeout",
+		default:0,
+		action:"generic /sys/class/misc/notification/notification_timeout",
+		values:{
+0:"∞",
+60000:"1 minute",
+180000:"3 minutes",
+300000:"5 minutes",
+600000:"10 minutes",
+1200000:"20 minutes",
+1800000:"30 minutes",
+3600000:"1 hour",
+7200000:"2 hours",
+		}
+	}},
+	{ SOptionList:{
+		title:"BLN Effect",
+		default:Steady,
+                action:"option blneffect",
+                values:[
+			Steady,
+			Blinking,
+			Breathing,
+                ]
+        }},
+    { SPane:{
+		title:"Touchkey LEDs Settings",
+	}},
+        { SSeekBar:{
+	title:"Touchkey LEDs Timeout",
+		default:0,
+		action:"generic /sys/class/misc/notification/bl_timeout",
+		values:{
+0:"∞",
+3000:"3 seconds",
+5000:"5 seconds",
+		}
+	}},
+    ]
+},
+    ]
+}

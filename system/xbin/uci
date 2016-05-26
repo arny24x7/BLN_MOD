@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+CONFIG_JSON=/system/Synapse/synapse/config.json;
+ACTION_SCRIPTS=/system/Synapse/synapse/actions/;
+
+case "${1}" in
+  config)
+	cat $CONFIG_JSON;;
+  configpath)
+	echo $CONFIG_JSON;;
+  actionpath)
+	echo $ACTION_SCRIPTS;;
+esac;

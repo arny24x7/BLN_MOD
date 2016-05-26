@@ -1,0 +1,42 @@
+bln() {
+	if [[ ! -z $2 ]]; then
+		case $2 in
+		Steady)
+			echo "0" > /sys/class/misc/notification/breathing
+			echo "reset" > /sys/class/misc/notification/breathing_steps
+			;;
+		Breathing)
+			echo "1" > /sys/class/misc/notification/breathing
+            echo "reset" > /sys/class/misc/notification/breathing_steps
+            echo "2600 3300 70 50" > /sys/class/misc/notification/breathing_steps
+            echo "3300 2600 70 50" > /sys/class/misc/notification/breathing_steps
+            ;;
+		Blinking)
+			echo "1" > /sys/class/misc/notification/breathing
+            echo "reset" > /sys/class/misc/notification/breathing_steps
+            echo "2500 2500 1000 100" > /sys/class/misc/notification/breathing_steps
+            echo "3300 3300 1000 100" > /sys/class/misc/notification/breathing_steps
+            ;;
+		esac
+	fi
+	if grep -q 0 /sys/class/misc/notification/breathing ; then
+		echo Steady
+	elif grep -q 50 /sys/class/misc/notification/breathing_steps ; then
+		echo Breathing
+	elif grep -q 1000 /sys/class/misc/notification/breathing_steps ; then
+		echo Blinking
+	fi
+}
+
+case $1 in
+
+blneffect)
+
+if [[ ! -z $2 ]]; then
+		bln $1 $2
+	else
+		bln $1
+	fi
+	;;
+
+esac
