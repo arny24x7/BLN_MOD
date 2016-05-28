@@ -25,7 +25,7 @@ bln() {
 		esac
 	fi
 	if grep -q 0 /sys/class/misc/notification/breathing ; then
-			echo Steady
+		echo Steady
 	elif grep -q "20000ms 0mV" /sys/class/misc/notification/breathing_steps ; then
 		echo Dimmed
 	elif grep -q "70ms 50mV" /sys/class/misc/notification/breathing_steps ; then

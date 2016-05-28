@@ -9,15 +9,10 @@ ui_print("");
 show_progress(0.100000, 0);
 
 ui_print("");
-ui_print("##################################################### ");
-ui_print("     BLN MOD  by arnab ");
-ui_print("     Dimmed mode by the.gangster ");
-ui_print("     Multilanguage support by the.gangster ");
-ui_print("     German translations by the.gangster ");
-ui_print("     French translations by Draky50110 ");
-ui_print("     (Brazilian) Portuguese translations by TopFuel ");
-ui_print("     Device: i9100        ");
-ui_print("##################################################### ");
+ui_print(" ########################### ");
+ui_print("           BLN MOD           ");
+ui_print("        Device: i9100        ");
+ui_print(" ########################### ");
 ui_print("");
 show_progress(0.100000, 40);
 
