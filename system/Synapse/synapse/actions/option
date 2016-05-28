@@ -5,6 +5,11 @@ bln() {
 			echo "0" > /sys/class/misc/notification/breathing
 			echo "reset" > /sys/class/misc/notification/breathing_steps
 			;;
+		Dimmed)
+			echo "1" > /sys/class/misc/notification/breathing
+			echo "reset" > /sys/class/misc/notification/breathing_steps
+			echo "2600 2600 20000 0" > /sys/class/misc/notification/breathing_steps
+			;;
 		Breathing)
 			echo "1" > /sys/class/misc/notification/breathing
             echo "reset" > /sys/class/misc/notification/breathing_steps
@@ -20,10 +25,12 @@ bln() {
 		esac
 	fi
 	if grep -q 0 /sys/class/misc/notification/breathing ; then
-		echo Steady
-	elif grep -q 50 /sys/class/misc/notification/breathing_steps ; then
+			echo Steady
+	elif grep -q "20000ms 0mV" /sys/class/misc/notification/breathing_steps ; then
+		echo Dimmed
+	elif grep -q "70ms 50mV" /sys/class/misc/notification/breathing_steps ; then
 		echo Breathing
-	elif grep -q 1000 /sys/class/misc/notification/breathing_steps ; then
+	elif grep -q "1000ms 100mV" /sys/class/misc/notification/breathing_steps ; then
 		echo Blinking
 	fi
 }
