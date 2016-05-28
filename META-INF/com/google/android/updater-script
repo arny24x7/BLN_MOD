@@ -10,7 +10,8 @@ show_progress(0.100000, 0);
 
 ui_print("");
 ui_print(" ########################### ");
-ui_print("           BLN MOD           ");
+ui_print("           BLN MOD  by arnab         ");
+ui_print(" dimmed-mode and multilanguage-support added by the.gangster");
 ui_print("        Device: i9100        ");
 ui_print(" ########################### ");
 ui_print("");

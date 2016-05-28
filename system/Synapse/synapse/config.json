@@ -5,52 +5,68 @@
     name:BLN,
     elements:[
     { STitleBar:{
-		title:"Backlight Notification Settings"
+		title:{
+			en:"Backlight Notification Settings",
+			de:"Backlight Notification Einstellungen"
+		}
 	}},
 	{ SCheckBox:{
-		description:"BLN will get the ‘menu’ and ‘back’ buttons to light up when you receive a new text, email, or missed call, which means you won’t need to unlock the screen to discover a notification.",
+		description:{
+			en:"BLN will get the ‘menu’ and ‘back’ buttons to light up when you receive a new text, email, or missed call, which means you won’t need to unlock the screen to discover a notification.",
+			de:"BLN wird die ‘menu’ und ‘back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss."
+		},
                 label:"BLN",
                 default:0,
                 action:"generic /sys/class/misc/notification/notification_enabled",
         }},
 
         { SSeekBar:{
-	title:"Notification Timeout",
+		title:{
+			en:"Notification Timeout",
+			de:"Benachrichtigungsauszeit"
+		},
 		default:0,
 		action:"generic /sys/class/misc/notification/notification_timeout",
 		values:{
-0:"∞",
-60000:"1 minute",
-180000:"3 minutes",
-300000:"5 minutes",
-600000:"10 minutes",
-1200000:"20 minutes",
-1800000:"30 minutes",
-3600000:"1 hour",
-7200000:"2 hours",
+			0:"∞",
+			60000:{en:"1 minute",de:"1 Minute"},
+			180000:{en:"3 minutes",de:"3 Minuten"},
+			300000:{en:"5 minutes",de:"5 Minuten"},
+			600000:{en:"10 minutes",de:"10 Minuten"},
+			1200000:{en:"20 minutes",de:"20 Minuten"},
+			1800000:{en:"30 minutes",de:"30 Minuten"},
+			3600000:{en:"1 hour",de:"1 Stunde"},
+			7200000:{en:"2 hours",de:"2 Stunden"},
 		}
 	}},
 	{ SOptionList:{
-		title:"BLN Effect",
+		title:{
+			en:"BLN Effect",
+			de:"BLN Effekt"
+		},
 		default:Steady,
                 action:"option blneffect",
                 values:[
 			Steady,
+			Dimmed,
 			Blinking,
 			Breathing,
                 ]
         }},
     { SPane:{
-		title:"Touchkey LEDs Settings",
+		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen"},
 	}},
         { SSeekBar:{
-	title:"Touchkey LEDs Timeout",
+		title:{
+			en:"Touchkey LEDs Timeout",
+			de:"Sensortasten LED Auszeit"
+		},
 		default:0,
 		action:"generic /sys/class/misc/notification/bl_timeout",
 		values:{
-0:"∞",
-3000:"3 seconds",
-5000:"5 seconds",
+			0:"∞",
+			3000:{en:"3 seconds",de:"3 Sekunden"},
+			5000:{en:"5 seconds",de:"5 Sekunden"},
 		}
 	}},
     ]
