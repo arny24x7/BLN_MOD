@@ -60,13 +60,13 @@
 			ru:"Эффект BLN",
 			tr:"BLN Efekti"
 		},
-		default:Steady,
+		default:Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно"},
                 action:"option blneffect",
                 values:[
-			Steady,
-			Dimmed,
-			Blinking,
-			Breathing,
+			Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно"},
+			Dimmed:{en:"Dimmed",pt:"Escurecida",ru:"Тускло"},
+			Blinking:{en:"Blinking",pt:"Piscando",ru:"Мигание"},
+			Breathing:{en:"Breathing",pt:"Pulsando",ru:"Пульсация"},
                 ]
         }},
     { SPane:{
