@@ -58,12 +58,12 @@
 		},
 		default:Steady,
                 action:"option blneffect",
-                values:[
-			Steady,
-			Dimmed,
-			Blinking,
-			Breathing,
-                ]
+                values:{
+			Steady:{en:"Steady",pt:"Fixa"},
+			Dimmed:{en:"Dimmed",pt:"Escurecida"},
+			Blinking:{en:"Blinking",pt:"Piscando"},
+			Breathing:{en:"Breathing",pt:"Pulsando"},
+                }
         }},
     { SPane:{
 		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",fr:"Paramètres des touches LED",pt:"Configurações dos LEDs de toque",tr:"Dokunmatik LED Ayarları"},
