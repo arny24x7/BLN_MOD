@@ -81,7 +81,7 @@
 		values:{
 			0:"∞",
 			3000:{en:"3 seconds",de:"3 Sekunden",fr:"3 secondes",pt:"3 segundos",tr:"3 saniye"},
-			5000:{en:"5 seconds",de:"5 Sekunden",fr"5 secondes",pt:"5 segundos",tr:"5 saniye"},
+			5000:{en:"5 seconds",de:"5 Sekunden",fr:"5 secondes",pt:"5 segundos",tr:"5 saniye"},
 		}
 	}},
     ]
