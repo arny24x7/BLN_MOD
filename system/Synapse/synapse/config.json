@@ -62,12 +62,12 @@
 		},
 		default:Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно"},
                 action:"option blneffect",
-                values:[
+                values:{
 			Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно"},
 			Dimmed:{en:"Dimmed",pt:"Escurecida",ru:"Тускло"},
 			Blinking:{en:"Blinking",pt:"Piscando",ru:"Мигание"},
 			Breathing:{en:"Breathing",pt:"Pulsando",ru:"Пульсация"},
-                ]
+                }
         }},
     { SPane:{
 		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",fr:"Paramètres des touches LED",pt:"Configurações dos LEDs de toque",ru:"Параметры индикаторов сенсорных кнопок",tr:"Dokunmatik LED Ayarları"},
