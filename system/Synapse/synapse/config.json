@@ -20,7 +20,7 @@
 			de:"BLN wird die ‘Menu’ und ‘Back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss.",
 			fr:"BLN allumera les boutons ‘menu’ et ‘retour’ quand vous recevrez un nouveau SMS, e-mail ou pour un appel manqué, sans avoir besoin d'allumer l'écran pour voir les notifications.",
 			pt:"BLN vai iluminar os botões de ‘menu’ e ‘voltar’ quando você receber uma nova mensagem, e-mail ou ligação perdida, o que significa que você saberá quando tem notificações pendentes sem precisar ligar a tela.",
-			ru:"Этот параметр включает подсветку кнопок ''Меню'' и ''Назад'', когда вы получаете новое сообщение, E-mail или пропущенный вызов",
+			ru:"Этот параметр включает подсветку кнопок ''Меню'' и ''Назад'', когда вы получаете новое сообщение, E-mail или пропущенный вызов.",
 			tr:"BLN size bir bildirimi keşfetmek için ekranı açmak zorunda kalmadan, yeni bir sms, e-posta veya bir cevapsız çağrı aldığınızda 'menü' ve 'geri' düğmelerini aydınlatacaktır."
 		},
                 label:"BLN",
