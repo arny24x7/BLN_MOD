@@ -10,6 +10,7 @@
 			de:"Backlight Notification Einstellungen",
 			fr:"Paramètres de Notifications Backlight",
 			pt:"Configurações do Backlight Notification",
+			ru:"Параметры подсветки уведомлений"
 			tr:"Arka Işık Bildirim Ayarları"
 		}
 	}},
@@ -19,6 +20,7 @@
 			de:"BLN wird die ‘Menu’ und ‘Back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss.",
 			fr:"BLN allumera les boutons ‘menu’ et ‘retour’ quand vous recevrez un nouveau SMS, e-mail ou pour un appel manqué, sans avoir besoin d'allumer l'écran pour voir les notifications.",
 			pt:"BLN vai iluminar os botões de ‘menu’ e ‘voltar’ quando você receber uma nova mensagem, e-mail ou ligação perdida, o que significa que você saberá quando tem notificações pendentes sem precisar ligar a tela.",
+			ru:"Этот параметр включает подсветку кнопок ''Меню'' и ''Назад'', когда вы получаете новое сообщение, E-mail или пропущенный вызов",
 			tr:"BLN size bir bildirimi keşfetmek için ekranı açmak zorunda kalmadan, yeni bir sms, e-posta veya bir cevapsız çağrı aldığınızda 'menü' ve 'geri' düğmelerini aydınlatacaktır."
 		},
                 label:"BLN",
@@ -32,20 +34,21 @@
 			de:"Benachrichtigungsauszeit",
 			fr:"Délai des notifications",
 			pt:"Tempo limite da luz de notificação",
+			ru:"Тайм-аут уведомления",
 			tr:"Bildirim Zaman Aşımı"
 		},
 		default:0,
 		action:"generic /sys/class/misc/notification/notification_timeout",
 		values:{
-			0:"∞",
-			60000:{en:"1 minute",de:"1 Minute",fr:"1 minute",pt:"1 minuto",tr:"1 dakika"},
-			180000:{en:"3 minutes",de:"3 Minuten",fr:"3 minutes",pt:"3 minutos",tr:"3 dakika"},
-			300000:{en:"5 minutes",de:"5 Minuten",fr:"5 minutes",pt:"5 minutos",tr:"5 dakika"},
-			600000:{en:"10 minutes",de:"10 Minuten",fr:"10 minutes",pt:"10 minutos",tr:"10 dakika"},
-			1200000:{en:"20 minutes",de:"20 Minuten",fr:"20 minutes",pt:"20 minutos",tr:"20 dakika"},
-			1800000:{en:"30 minutes",de:"30 Minuten",fr:"30 minutes",pt:"30 minutos",tr:"30 dakika"},
-			3600000:{en:"1 hour",de:"1 Stunde",fr:"1 heure",pt:"1 hora",tr:"1 saat"},
-			7200000:{en:"2 hours",de:"2 Stunden",fr:"2 heures",pt:"2 horas",tr:"2 saat"},
+			0:{en:"∞",de:"∞",fr:"∞",pt:"∞",ru:"Не ограничено",tr:"∞"}
+			60000:{en:"1 minute",de:"1 Minute",fr:"1 minute",pt:"1 minuto",ru:"1 минута",tr:"1 dakika"},
+			180000:{en:"3 minutes",de:"3 Minuten",fr:"3 minutes",pt:"3 minutos",ru:"3 минуты",tr:"3 dakika"},
+			300000:{en:"5 minutes",de:"5 Minuten",fr:"5 minutes",pt:"5 minutos",ru:"5 минут",tr:"5 dakika"},
+			600000:{en:"10 minutes",de:"10 Minuten",fr:"10 minutes",pt:"10 minutos",ru:"10 минут",tr:"10 dakika"},
+			1200000:{en:"20 minutes",de:"20 Minuten",fr:"20 minutes",pt:"20 minutos",ru:"20 минут",tr:"20 dakika"},
+			1800000:{en:"30 minutes",de:"30 Minuten",fr:"30 minutes",pt:"30 minutos",ru:"30 минут",tr:"30 dakika"},
+			3600000:{en:"1 hour",de:"1 Stunde",fr:"1 heure",pt:"1 hora",ru:"1 час",tr:"1 saat"},
+			7200000:{en:"2 hours",de:"2 Stunden",fr:"2 heures",pt:"2 horas",ru:"2 часа",tr:"2 saat"},
 		}
 	}},
 	{ SOptionList:{
@@ -54,6 +57,7 @@
 			de:"BLN Effekt",
 			fr:"Effet BLN",
 			pt:"Efeito do BLN",
+			ru:"Эффект BLN",
 			tr:"BLN Efekti"
 		},
 		default:Steady,
@@ -66,7 +70,7 @@
                 ]
         }},
     { SPane:{
-		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",fr:"Paramètres des touches LED",pt:"Configurações dos LEDs de toque",tr:"Dokunmatik LED Ayarları"},
+		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",fr:"Paramètres des touches LED",pt:"Configurações dos LEDs de toque",ru:"Параметры индикаторов сенсорных кнопок",tr:"Dokunmatik LED Ayarları"},
 	}},
         { SSeekBar:{
 		title:{
@@ -74,14 +78,15 @@
 			de:"Sensortasten LED Auszeit",
 			fr:"Délai des touches LED",
 			pt:"Tempo limite dos LEDs de toque",
+			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
 		default:0,
 		action:"generic /sys/class/misc/notification/bl_timeout",
 		values:{
-			0:"∞",
-			3000:{en:"3 seconds",de:"3 Sekunden",fr:"3 secondes",pt:"3 segundos",tr:"3 saniye"},
-			5000:{en:"5 seconds",de:"5 Sekunden",fr"5 secondes",pt:"5 segundos",tr:"5 saniye"},
+			0:{en:"∞",de:"∞",fr:"∞",pt:"∞",ru:"Не ограничено",tr:"∞"}
+			3000:{en:"3 seconds",de:"3 Sekunden",fr:"3 secondes",pt:"3 segundos",ru:"3 секунды",tr:"3 saniye"},
+			5000:{en:"5 seconds",de:"5 Sekunden",fr"5 secondes",pt:"5 segundos",ru:"5 секунд",tr:"5 saniye"},
 		}
 	}},
     ]
