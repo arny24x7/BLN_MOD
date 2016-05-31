@@ -63,10 +63,10 @@
 		default:Steady,
                 action:"option blneffect",
                 values:{
-			Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно"},
-			Dimmed:{en:"Dimmed",pt:"Escurecida",ru:"Тускло"},
-			Blinking:{en:"Blinking",pt:"Piscando",ru:"Мигание"},
-			Breathing:{en:"Breathing",pt:"Pulsando",ru:"Пульсация"},
+			Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
+			Dimmed:{en:"Dimmed",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
+			Blinking:{en:"Blinking",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
+			Breathing:{en:"Breathing",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
                 }
         }},
     { SPane:{
