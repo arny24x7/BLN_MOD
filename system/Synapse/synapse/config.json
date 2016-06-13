@@ -19,7 +19,7 @@
 			de:"BLN wird die ‘Menu’ und ‘Back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss.",
 			fr:"BLN allumera les boutons ‘menu’ et ‘retour’ quand vous recevrez un nouveau SMS, e-mail ou pour un appel manqué, sans avoir besoin d'allumer l'écran pour voir les notifications.",
 			pt:"BLN vai iluminar os botões de ‘menu’ e ‘voltar’ quando você receber uma nova mensagem, e-mail ou ligação perdida, o que significa que você saberá quando tem notificações pendentes sem precisar ligar a tela.",
-			ru:"Этот параметр включает подсветку кнопок ‘Меню’ и ‘Назад’, когда вы получаете новое сообщение, E-mail или пропущенный вызов.",
+			ru:"Этот параметр включает подсветку кнопок ‘Меню’ и ‘Назад’, когда вы получаете новое SMS-сообщение, E-mail или пропущенный вызов.",
 			tr:"BLN size bir bildirimi keşfetmek için ekranı açmak zorunda kalmadan, yeni bir sms, e-posta veya bir cevapsız çağrı aldığınızda 'menü' ve 'geri' düğmelerini aydınlatacaktır."
 		},
                 label:"BLN",
@@ -65,7 +65,7 @@
 			Dimmed:{en:"Dimmed",de:"Gedimmt",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
 			Blinking:{en:"Blinking",de:"Blinken",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
 			Breathing:{en:"Breathing",de:"Pulsieren",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
-			Orgasm:{en:"Orgasm",de:"Orgasmus",pt:"Orgasmo",ru:"оргазм",tr:"Orgazm"},
+			Orgasm:{en:"Orgasm",de:"Orgasmus",pt:"Orgasmo",ru:"Вспышка",tr:"Orgazm"},
                 },
 		notify:[
 			{
@@ -91,11 +91,13 @@
 	{ SSeekBar:{
 		title:{
 			en:"Dimmed/Starting Voltage for breathing/blinking",
-			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren"
+			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren",
+                       ru:"Стартовое напряжение для эффектов: ''Тускло'', ''Пульсация'', ''Мигание''. "
 		},
 		description:{
 			en:"Set the starting voltage level. (ignored by other modes)",
-			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)"
+			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)",
+                       ru:"Установка начального уровня напряжения. (игнорируются другие эффекты)"
 		},
 		unit:" V",
 		step:50,
@@ -114,11 +116,13 @@
 	{ SSeekBar:{
 		title:{
 			en:"Ending voltage for breathing/blinking",
-			de:"Ende-Spannung für Blinken/Pulsieren"
+			de:"Ende-Spannung für Blinken/Pulsieren",
+                       ru:"Конечное напряжение для эффектов: ''Пульсация'', ''Мигание''. "
 		},
 		description:{
 			en:"Set the ending voltage level. (ignored by other modes)",
-			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)"
+			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)",
+                       ru:"Установка конечного уровня напряжения. (игнорируются другие эффекты)"
 		},
 		unit:" V",
 		step:50,
@@ -133,12 +137,13 @@
 			de:"Effekt-Geschwindigkeit",
 			fr:"Vitesse Effet",
 			pt:"velocidade efeito",
-			ru:"Влияние скорости",
+			ru:"Скорость эффекта",
 			tr:"etkisi Hız"
 		},
 		description:{
 			en:"Sets the speed for breathing or blinking steps",
-			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)"
+			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)",
+                       ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. "
 		},
 		unit:" ms",
 		values:[
@@ -168,7 +173,8 @@
 		},
 		description:{
 			en:"voltage steppings monitor",
-			de:"Konfigurations-Monitor"
+			de:"Konfigurations-Monitor",
+                       ru:"Монитор степпингов напряжения: "
 		},
 		refresh:250,
 		action:"echo $(echo $(cat /sys/class/misc/notification/breathing_steps | tr \\n \" \") | { read C0 C1 C2 C3 C4 C5 C6 C7; echo ${C0%} ${C1%} ${C2%} ${C3%} @n${C4%} ${C5%} ${C6%} ${C7%} @n;})"
@@ -179,7 +185,7 @@
 			de:"JETZT TESTEN",
 			fr:"essai",
 			pt:"ensaio",
-			ru:"тестировать",
+			ru:"Проверка",
 			tr:"test"
 		},
 		action:"option toggleLEDs"
@@ -203,7 +209,14 @@
 			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
-		description:" 0 = ∞ ",
+		description:{
+                       en:" 0 = ∞ ",
+                       de:" 0 = ∞ ",
+                       fr:" 0 = ∞ ",
+                       pt:" 0 = ∞ ",
+                       ru:" 0 = Не ограничено ",
+                       tr:" 0 = ∞ "
+                },
 		unit:" s",
 		step:500,
 		weight:0.001,
