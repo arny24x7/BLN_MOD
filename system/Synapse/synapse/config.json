@@ -1,9 +1,10 @@
+
 {
     sections: [
-	{
-	name:BLN,
-	elements:[
-	{ 	STitleBar:{
+		{
+    name:BLN,
+    elements:[
+    { STitleBar:{
 		title:{
 			en:"Backlight Notification Settings",
 			de:"Backlight Notification Einstellungen",
@@ -26,6 +27,7 @@
                 default:0,
                 action:"generic /sys/class/misc/notification/notification_enabled",
         }},
+
         { SSeekBar:{
 		title:{
 			en:"Notification Timeout",
@@ -61,140 +63,16 @@
 		default:Steady,
                 action:"option blneffect",
                 values:{
-			Steady:{en:"Steady",de:"Statisch",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
-			Dimmed:{en:"Dimmed",de:"Gedimmt",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
-			Blinking:{en:"Blinking",de:"Blinken",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
-			Breathing:{en:"Breathing",de:"Pulsieren",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
-			Orgasm:{en:"Orgasm",de:"Orgasmus",pt:"Orgasmo",ru:"оргазм",tr:"Orgazm"},
-                },
-		notify:[
-			{
-				on:APPLY,
-				do:[ REFRESH, APPLY ],
-				to:[
-					"option startVoltage",
-					"option endVoltage",
-					"option steplength"
-				]
-			},
-			{
-				on:REFRESH,
-				do:REFRESH,
-				to:[
-					"option startVoltage",
-					"option endVoltage",
-					"option steplength"
-				]
-			}
-		]
+			Steady:{en:"Steady",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
+			Dimmed:{en:"Dimmed",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
+			Blinking:{en:"Blinking",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
+			Breathing:{en:"Breathing",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
+                }
         }},
-	{ SSeekBar:{
-		title:{
-			en:"Dimmed/Starting Voltage for breathing/blinking",
-			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren"
-		},
-		description:{
-			en:"Set the starting voltage level. (ignored by other modes)",
-			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)"
-		},
-		unit:" V",
-		step:50,
-		weight:0.001,
-		min:2500,
-		max:3300,
-		action:"option startVoltage",
-		notify:[
-			{
-				on:APPLY,
-				do:[ REFRESH, APPLY ],
-				to:"option endVoltage"
-			}
-		]
+    { SPane:{
+		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",fr:"Paramètres des touches LED",pt:"Configurações dos LEDs de toque",ru:"Параметры индикаторов сенсорных кнопок",tr:"Dokunmatik LED Ayarları"},
 	}},
-	{ SSeekBar:{
-		title:{
-			en:"Ending voltage for breathing/blinking",
-			de:"Ende-Spannung für Blinken/Pulsieren"
-		},
-		description:{
-			en:"Set the ending voltage level. (ignored by other modes)",
-			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)"
-		},
-		unit:" V",
-		step:50,
-		weight:0.001,
-		min:2500,
-		max:3300,
-		action:"option endVoltage"
-	}},
-	{ SOptionList:{
-		title:{
-			en:"Effect-Speed",
-			de:"Effekt-Geschwindigkeit",
-			fr:"Vitesse Effet",
-			pt:"velocidade efeito",
-			ru:"Влияние скорости",
-			tr:"etkisi Hız"
-		},
-		description:{
-			en:"Sets the speed for breathing or blinking steps",
-			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)"
-		},
-		unit:" ms",
-		values:[
-			20000,
-			2000,
-			1000,
-			500,
-			350,
-			250,
-			200,
-			150,
-			100,
-			70,
-			50,
-			20,
-		],
-		action:"option steplength"
-	}},
-	{ SLiveLabel:{
-		title:{
-			en:"Current settings",
-			de:"Aktuelle Werte",
-			fr:"Paramètres actuels",
-			pt:"Configurações atuais",
-			ru:"Текущие настройки",
-			tr:"Şuanki ayarlar"
-		},
-		description:{
-			en:"voltage steppings monitor",
-			de:"Konfigurations-Monitor"
-		},
-		refresh:250,
-		action:"echo $(echo $(cat /sys/class/misc/notification/breathing_steps | tr \\n \" \") | { read C0 C1 C2 C3 C4 C5 C6 C7; echo ${C0%} ${C1%} ${C2%} ${C3%} @n${C4%} ${C5%} ${C6%} ${C7%} @n;})"
-	}},
-	{ SButton:{
-		label:{
-			en:"TEST NOW",
-			de:"JETZT TESTEN",
-			fr:"essai",
-			pt:"ensaio",
-			ru:"тестировать",
-			tr:"test"
-		},
-		action:"option toggleLEDs"
-	}},	
-	{ SPane:{
-		title:{
-			en:"Touchkey LEDs Settings",
-			de:"Sensortasten LED Einstellungen",
-			fr:"Paramètres des touches LED",
-			pt:"Configurações dos LEDs de toque",
-			ru:"Параметры индикаторов сенсорных кнопок",
-			tr:"Dokunmatik LED Ayarları"
-		},
-	}},
-	{ SSeekBar:{
+        { SSeekBar:{
 		title:{
 			en:"Touchkey LEDs Timeout",
 			de:"Sensortasten LED Auszeit",
@@ -203,14 +81,15 @@
 			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
-		unit:" s",
-		step:500,
-		weight:0.001,
-		min:0,
-		max:5000,
-		action:"generic /sys/class/misc/notification/bl_timeout"
+		default:0,
+		action:"generic /sys/class/misc/notification/bl_timeout",
+		values:{
+			0:{en:"∞",de:"∞",fr:"∞",pt:"∞",ru:"Не ограничено",tr:"∞"},
+			3000:{en:"3 seconds",de:"3 Sekunden",fr:"3 secondes",pt:"3 segundos",ru:"3 секунды",tr:"3 saniye"},
+			5000:{en:"5 seconds",de:"5 Sekunden",fr:"5 secondes",pt:"5 segundos",ru:"5 секунд",tr:"5 saniye"},
+		}
 	}},
-	]
-	},
+    ]
+},
     ]
 }
