@@ -203,7 +203,6 @@
 			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
-		description:" 0 = ∞ ",
 		unit:" s",
 		step:500,
 		weight:0.001,
