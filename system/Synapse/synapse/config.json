@@ -94,14 +94,16 @@
 			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren",
 			fr:"Grisé/Voltage de départ pour clignotement",
 			pt:"Voltagem inicial para os efeitos pulsando/piscando",
-			ru:"Стартовое напряжение для эффектов: ''Тускло'', ''Пульсация'', ''Мигание''. "
+			ru:"Стартовое напряжение для эффектов: ''Тускло'', ''Пульсация'', ''Мигание''. ",
+			tr:"''Soluk'', ''Nefes'' ve ''Yanıp sönen'' efektleri için başlangıç voltajı"
 		},
 		description:{
 			en:"Set the starting voltage level. (ignored by other modes)",
 			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)",
 			fr:"Définir le voltage de départ (ignoré par les autres modes",
 			pt:"Define o nível da voltagem de início. (ignorados por outros efeitos)",
-			ru:"Установка начального уровня напряжения. (игнорируются другие эффекты)"
+			ru:"Установка начального уровня напряжения. (игнорируются другие эффекты)",
+			tr:"Başlangıç voltajı seviyesini ayarlayın. (diğer efektlerde göz ardı edilir)"
 		},
 		unit:" V",
 		step:50,
@@ -123,14 +125,16 @@
 			de:"Ende-Spannung für Blinken/Pulsieren",
 			fr:"Voltage de fin pour le clignotement",
 			pt:"Voltagem final para os efeitos pulsando/piscando",
-			ru:"Конечное напряжение для эффектов: ''Пульсация'', ''Мигание''. "
+			ru:"Конечное напряжение для эффектов: ''Пульсация'', ''Мигание''. ",
+			tr:"''Nefes'' ve ''Yanıp sönen'' efektleri için bitiş voltajı"
 		},
 		description:{
 			en:"Set the ending voltage level. (ignored by other modes)",
 			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)",
 			fr:"Définir le voltage de fin (ignoré par les autres modes)",
 			pt:"Define o nível da voltagem final. (ignorados por outros efeitos)",
-			ru:"Установка конечного уровня напряжения. (игнорируются другие эффекты)"
+			ru:"Установка конечного уровня напряжения. (игнорируются другие эффекты)",
+			tr:"Bitiş voltajı seviyesini ayarlayın. (diğer efektlerde göz ardı edilir)"
 		},
 		unit:" V",
 		step:50,
@@ -146,14 +150,15 @@
 			fr:"Vitesse de l'effet",
 			pt:"Velocidade do efeito",
 			ru:"Скорость эффекта",
-			tr:"etkisi Hız"
+			tr:"Efekt Hızı"
 		},
 		description:{
 			en:"Sets the speed for breathing or blinking steps",
 			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)",
 			fr:"Définir la vitesse de clignotement",
 			pt:"Define a velocidade para os efeitos pulsando/piscando",
-			ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. "
+			ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. ",
+			tr:"''Nefes'' ve ''Yanıp sönen'' efektleri için efekt hızını ayarlayın"
 		},
 		unit:" ms",
 		values:[
@@ -186,7 +191,8 @@
 			fr:"Moniteur d'espacement pour voltage",
 			de:"Konfigurations-Monitor",
 			pt:"Monitor das voltagens",
-			ru:"Монитор степпингов напряжения: "
+			ru:"Монитор степпингов напряжения: ",
+			tr:"Voltaj kademeleri monitörü"
 		},
 		refresh:250,
 		action:"echo $(echo $(cat /sys/class/misc/notification/breathing_steps | tr \\n \" \") | { read C0 C1 C2 C3 C4 C5 C6 C7; echo ${C0%} ${C1%} ${C2%} ${C3%} @n${C4%} ${C5%} ${C6%} ${C7%} @n;})"
@@ -198,7 +204,7 @@
 			fr:"Tester",
 			pt:"TESTAR AGORA",
 			ru:"Проверка",
-			tr:"test"
+			tr:"TEST ET"
 		},
 		action:"option toggleLEDs"
 	}},	
