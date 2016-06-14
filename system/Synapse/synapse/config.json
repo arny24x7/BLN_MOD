@@ -61,11 +61,11 @@
 		default:Steady,
                 action:"option blneffect",
                 values:{
-			Steady:{en:"Steady",de:"Statisch",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
-			Dimmed:{en:"Dimmed",de:"Gedimmt",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
-			Blinking:{en:"Blinking",de:"Blinken",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
-			Breathing:{en:"Breathing",de:"Pulsieren",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
-			Orgasm:{en:"Orgasm",de:"Orgasmus",pt:"Orgasmo",ru:"Вспышка",tr:"Orgazm"},
+			Steady:{en:"Steady",de:"Statisch",fr:"Fixe",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
+			Dimmed:{en:"Dimmed",de:"Gedimmt",fr:"Grisé",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
+			Blinking:{en:"Blinking",de:"Blinken",fr:"Clignotant",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
+			Breathing:{en:"Breathing",de:"Pulsieren",fr:"Clign. rapide",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
+			Orgasm:{en:"Orgasm",de:"Orgasmus",fr:"Orgasme",pt:"Orgasmo",ru:"Вспышка",tr:"Orgazm"},
                 },
 		notify:[
 			{
@@ -92,11 +92,13 @@
 		title:{
 			en:"Dimmed/Starting Voltage for breathing/blinking",
 			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren",
+			fr:"Grisé/Voltage de départ pour clignotement",
                        ru:"Стартовое напряжение для эффектов: ''Тускло'', ''Пульсация'', ''Мигание''. "
 		},
 		description:{
 			en:"Set the starting voltage level. (ignored by other modes)",
 			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)",
+			fr:"Définir le voltage de départ (ignoré par les autres modes",
                        ru:"Установка начального уровня напряжения. (игнорируются другие эффекты)"
 		},
 		unit:" V",
@@ -117,11 +119,13 @@
 		title:{
 			en:"Ending voltage for breathing/blinking",
 			de:"Ende-Spannung für Blinken/Pulsieren",
+			fr:"Voltage de fin pour le clignotement",
                        ru:"Конечное напряжение для эффектов: ''Пульсация'', ''Мигание''. "
 		},
 		description:{
 			en:"Set the ending voltage level. (ignored by other modes)",
 			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)",
+			fr:"Définir le voltage de fin (ignoré par les autres modes)",
                        ru:"Установка конечного уровня напряжения. (игнорируются другие эффекты)"
 		},
 		unit:" V",
@@ -135,7 +139,7 @@
 		title:{
 			en:"Effect-Speed",
 			de:"Effekt-Geschwindigkeit",
-			fr:"Vitesse Effet",
+			fr:"Vitesse de l'effet",
 			pt:"velocidade efeito",
 			ru:"Скорость эффекта",
 			tr:"etkisi Hız"
@@ -143,6 +147,7 @@
 		description:{
 			en:"Sets the speed for breathing or blinking steps",
 			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)",
+			fr:"Définir la vitesse de clignotement",
                        ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. "
 		},
 		unit:" ms",
@@ -173,6 +178,7 @@
 		},
 		description:{
 			en:"voltage steppings monitor",
+			fr:"Moniteur d'espacement pour voltage",
 			de:"Konfigurations-Monitor",
                        ru:"Монитор степпингов напряжения: "
 		},
@@ -183,7 +189,7 @@
 		label:{
 			en:"TEST NOW",
 			de:"JETZT TESTEN",
-			fr:"essai",
+			fr:"Tester",
 			pt:"ensaio",
 			ru:"Проверка",
 			tr:"test"
